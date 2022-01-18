@@ -1,10 +1,14 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Installment {
 	private Date date;
 	private double amount;
+	
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
 	
 	public Installment(Date date, double amount) {
 		this.date = date;
@@ -23,6 +27,9 @@ public class Installment {
 		this.amount = amount;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return sdf.format(date) + " - " + String.format("%.2f", amount);
+ 	}
 
 }
