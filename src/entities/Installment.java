@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class Installment {
 	private Date date;
-	private Double amount;
-	public Installment(Date date, Double amount) {
-		super();
+	private double amount;
+	
+	public Installment(Date date, double amount) {
 		this.date = date;
 		this.amount = amount;
 	}
@@ -16,10 +16,10 @@ public class Installment {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public Double getAmount() {
+	public double getAmount() {
 		return amount;
 	}
-	public void setAmount(Double amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 	
